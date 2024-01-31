@@ -5,6 +5,7 @@ import random
 
 
 numeroAdivinar = random.randint(1, 100)
+contador = 0
 
 while True:
     numero = int(input("Introduce un numero: "))
@@ -12,10 +13,12 @@ while True:
     while numero>100 or numero<0:
         numero = int(input("Numero introducido incorrecto tiene que ser entre 0-100: "))
 
+    contador +=1
+
     if(numero > numeroAdivinar):
         print("Numero introducido demasiado grande")
     elif(numero==numeroAdivinar):
-        print("Numero Adivinado !!!")
+        print("Numero Adivinado!!!, Conseguido con "+str(contador)+" intentos")
         break
     else:
         print("Numero introducido demasiado pequeño")
