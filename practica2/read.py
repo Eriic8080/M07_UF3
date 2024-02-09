@@ -1,5 +1,4 @@
 import psycopg2
-
 def leer(connection,conn):
 
         sql = '''
@@ -10,7 +9,9 @@ def leer(connection,conn):
         connection.execute(sql)
         conn.commit()
 
-        series = conn.feachall()
-        print("Lectura Hecha")
-        print(series)
-        
+        #Con el fetchall() recupero los datos de la consulta y los guardo en una variable
+        series = connection.fetchall()
+
+        #Aqui recorro la variable con todos los datos de la tabla SERIES para printar todas las linias que hay 
+        for linia in series:
+            print(linia)        
