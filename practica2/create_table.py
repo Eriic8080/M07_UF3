@@ -3,11 +3,12 @@ import psycopg2
 def tabla(connection,conn):
 
         sql = '''  
-                CREATE TABLE SERIES(
+                CREATE TABLE IF NOT EXISTS SERIES(
                         id SERIAL PRIMARY KEY,
                         name VARCHAR(255) NOT NULL,
                         genero VARCHAR(255) NOT NULL,
-                        fechaInicio BIGINT NOT NULL,
+                        autor VARCHAR(255) NOT NULL,
+                        fechaInicio VARCHAR NOT NULL,
                         fechaFin VARCHAR(255) NOT NULL
                 )
         '''
