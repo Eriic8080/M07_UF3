@@ -1,7 +1,6 @@
 import psycopg2
 def conectar():
 
-
         conn = psycopg2.connect(
             database = "practica2",
             user = 'eric',
@@ -10,7 +9,11 @@ def conectar():
             port = '5432'
         )
 
-        conection = conn.cursor()
+        connection = conn.cursor()
+
+        print("Conexion hecha")
+
+        return connection, conn
 
 
 
