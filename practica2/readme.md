@@ -1,0 +1,1 @@
+![Imagen Creacion de tabla](CAPTURAS/CreacionTabla.png)
